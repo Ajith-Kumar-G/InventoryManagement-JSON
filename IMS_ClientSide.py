@@ -5,7 +5,7 @@ jFile = open("inventory.json", "r+")
 prod_dict = json.load(jFile)
 prod_list = {}
 prod_selected = {}
-
+prod_outOfStock = {}
 
 def show_products():
     k = 1
@@ -27,6 +27,17 @@ def buy_confirm():
     print("\n Total Amount = " + str(total_sum))
 
 
+def commit_purchase():
+    jFile.seek(0)
+    json.dump(prod_dict, jFile)
+    SFile = open("productSales.json", 'w')
+    json.dump(prod_selected, SFile)
+    SFile.close()
+    OFile = open("outOfStock.json", 'w')
+    json.dump(prod_outOfStock, OFile)
+    OFile.close()
+
+
 show_products()
 no = ""
 
@@ -39,22 +50,23 @@ while no != '-1':
             break
         else:
             buy_confirm()
+            commit_purchase()
             break
     else:
         qn = int(input(" Qn: "))
         if prod_dict[prod_list[int(no)]]["quantity"] >= qn:
             prod_selected[prod_list[int(no)]] = {"Qn": qn, "total_price": prod_dict[prod_list[int(no)]]["price"] * qn}
             prod_dict[prod_list[int(no)]]["quantity"] -= qn
+            if prod_dict[prod_list[int(no)]]["quantity"] == 0:
+                prod_sel = prod_dict[prod_list[int(no)]]
+                timeDetail = datetime.now().strftime("\n %d/%m/%Y %H:%M:%S")
+                prod_outOfStock[prod_list[int(no)]] = {"name": prod_sel["name"], "price": prod_sel["price"],
+                                                       "TimeDetail": timeDetail}
         else:
             print(" Quantity Exceeded the stock!!")
 
 print("\n Thank you! \\(*.*)/ Visit Again !! ~")
-
-jFile.seek(0)
-json.dump(prod_dict, jFile)
 jFile.close()
 
-SFile = open("productSales.json", 'w')
-json.dump(prod_selected, SFile)
 date = datetime.now().strftime("\n %d/%m/%Y %H:%M:%S")
 print(date)
