@@ -28,11 +28,8 @@ def write_product():
         if str(p) not in old_prod:
             old_prod[p] = prod[p]
         else:
-            if prod[p]["price"] != old_prod[str(p)]["price"]:
-                old_prod[str(p)] = [old_prod[str(p)], prod[p]]
-            else:
-                prod[p]["quantity"] += old_prod[str(p)]["quantity"]
-                old_prod.update({str(p): prod[p]})
+            prod[p]["quantity"] += old_prod[str(p)]["quantity"]
+            old_prod.update({str(p): prod[p]})
     jFile.seek(0)
     json.dump(old_prod, jFile)
     jFile.close()
