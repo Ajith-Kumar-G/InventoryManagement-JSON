@@ -1,1 +1,67 @@
-{" 05/09/2021 18:53:43": {"4": {"Qn": 2, "total_price": 40.0, "name": "Real Fruit Juice- Mango"}, "123321": {"Qn": 3, "total_price": 45.0, "name": "TicTak"}, "278147": {"Qn": 2, "total_price": 260.0, "name": "Kitkat Box"}}, " 05/09/2021 18:48:20": {"769923": {"Qn": 1, "total_price": 40.0, "name": "GoodLife Milk"}, "3": {"Qn": 1, "total_price": 40.0, "name": "Jaggery"}}}
+{
+    " 05/09/2021 19:33:35": {
+        "300300": {
+            "Qn": 2,
+            "total_price": 240.0,
+            "name": "Facewash"
+        },
+        "800080": {
+            "Qn": 10,
+            "total_price": 600.0,
+            "name": "Instant Noodles"
+        }
+    },
+    " 05/09/2021 19:30:00": {
+        "769927": {
+            "Qn": 2,
+            "total_price": 466,
+            "name": "Lucky Plant"
+        },
+        "769934": {
+            "Qn": 1,
+            "total_price": 145,
+            "name": "Fidget Spinner"
+        }
+    },
+    " 05/09/2021 19:22:27": {
+        "99233": {
+            "Qn": 2,
+            "total_price": 100.0,
+            "name": "Pendent"
+        },
+        "889911": {
+            "Qn": 2,
+            "total_price": 80,
+            "name": "Aroma Sandal soap"
+        }
+    },
+    " 05/09/2021 18:53:43": {
+        "4": {
+            "Qn": 2,
+            "total_price": 40.0,
+            "name": "Real Fruit Juice- Mango"
+        },
+        "123321": {
+            "Qn": 3,
+            "total_price": 45.0,
+            "name": "TicTak"
+        },
+        "278147": {
+            "Qn": 2,
+            "total_price": 260.0,
+            "name": "Kitkat Box"
+        }
+    },
+    " 05/09/2021 18:48:20": {
+        "769923": {
+            "Qn": 1,
+            "total_price": 40.0,
+            "name": "GoodLife Milk"
+        },
+        "3": {
+            "Qn": 1,
+            "total_price": 40.0,
+            "name": "Jaggery"
+        }
+    }
+}

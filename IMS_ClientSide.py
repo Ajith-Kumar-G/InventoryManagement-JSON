@@ -40,25 +40,25 @@ def sales():
 
 def commit_purchase():
     jFile.seek(0)
-    json.dump(prod_dict, jFile)
+    json.dump(prod_dict, jFile, indent=4)
 
     pSFile = open("sales.json", 'r+')
     prod_sales[datetime.now().strftime(" %d/%m/%Y %H:%M:%S")] = sales()
     prod_sales.update(json.load(pSFile))
     pSFile.seek(0)
-    json.dump(prod_sales, pSFile)
+    json.dump(prod_sales, pSFile, indent=4)
     pSFile.close()
 
     SFile = open("productSales.json", 'r+')
     prod_selected.update(json.load(SFile))
     SFile.seek(0)
-    json.dump(prod_selected, SFile)
+    json.dump(prod_selected, SFile, indent=4)
     SFile.close()
 
     OFile = open("outOfStock.json", 'r+')
     prod_outOfStock.update(json.load(OFile))
     OFile.seek(0)
-    json.dump(prod_outOfStock, OFile)
+    json.dump(prod_outOfStock, OFile, indent=4)
     OFile.close()
 
 

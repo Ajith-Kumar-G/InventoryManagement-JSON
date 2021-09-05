@@ -31,19 +31,13 @@ def write_product():
             prod[p]["quantity"] += old_prod[str(p)]["quantity"]
             old_prod.update({str(p): prod[p]})
     jFile.seek(0)
-    json.dump(old_prod, jFile)
+    json.dump(old_prod, jFile, indent=4)
     jFile.close()
-
-
-def check_product():
-    # checking it
-    jFile = open("inventory.json", 'r')
-    print(jFile.read())
 
 
 get_product_details(no_of_Products)
 write_product()
-check_product()
+print("\n The Products are Added to inventory!")
 
 
 
