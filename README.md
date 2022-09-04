@@ -44,7 +44,7 @@
     "ProductID DD/MM/YYYY HH:MM": {
         "name": ,
         "price":,
-        "TimeDetail": "
+        "TimeDetail": 
     }
 }
 ```
